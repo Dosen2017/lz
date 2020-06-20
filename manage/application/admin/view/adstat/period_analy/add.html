@@ -1,0 +1,916 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_num" data-rule="required" class="form-control" name="row[user_num]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_name" class="form-control" name="row[user_name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Game_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-game_num" class="form-control" name="row[game_num]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Channel_pkg_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-channel_pkg_num" data-rule="required" class="form-control" name="row[channel_pkg_num]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Os_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-os_type" class="form-control selectpicker" name="row[os_type]">
+                {foreach name="osTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="1"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Channel_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-channel_num" class="form-control" name="row[channel_num]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge_amount" data-rule="required" class="form-control" name="row[charge_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge_count" data-rule="required" class="form-control" name="row[charge_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge_amount_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge_amount_lz" class="form-control" name="row[charge_amount_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge_count_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge_count_lz" class="form-control" name="row[charge_count_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge1_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge1_amount" class="form-control" name="row[charge1_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge1_amount_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge1_amount_lz" class="form-control" name="row[charge1_amount_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge2_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge2_amount" class="form-control" name="row[charge2_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge3_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge3_amount" class="form-control" name="row[charge3_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge4_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge4_amount" class="form-control" name="row[charge4_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge5_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge5_amount" class="form-control" name="row[charge5_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge6_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge6_amount" class="form-control" name="row[charge6_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge7_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge7_amount" class="form-control" name="row[charge7_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge8_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge8_amount" class="form-control" name="row[charge8_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge9_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge9_amount" class="form-control" name="row[charge9_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge10_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge10_amount" class="form-control" name="row[charge10_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge11_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge11_amount" class="form-control" name="row[charge11_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge12_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge12_amount" class="form-control" name="row[charge12_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge13_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge13_amount" class="form-control" name="row[charge13_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge14_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge14_amount" class="form-control" name="row[charge14_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge15_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge15_amount" class="form-control" name="row[charge15_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge30_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge30_amount" class="form-control" name="row[charge30_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge60_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge60_amount" class="form-control" name="row[charge60_amount]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Device_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-device_num" class="form-control" name="row[device_num]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Device_num_md5')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-device_num_md5" class="form-control" name="row[device_num_md5]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Device_model')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-device_model" class="form-control" name="row[device_model]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Mac')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-mac" class="form-control" name="row[mac]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Create_ip')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-create_ip" class="form-control" name="row[create_ip]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Create_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-create_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[create_time]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Create_d')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-create_d" class="form-control" name="row[create_d]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Country')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-country" class="form-control" name="row[country]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Province')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-province" class="form-control" name="row[province]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('City')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class='control-relative'><input id="c-city" class="form-control" data-toggle="city-picker" name="row[city]" type="text" value=""></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Last_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-last_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[last_time]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Last_ip')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-last_ip" class="form-control" name="row[last_ip]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Reg_source')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-reg_source" class="form-control" name="row[reg_source]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pack_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-pack_num" class="form-control" name="row[pack_num]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('B_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-b_id" data-rule="required" data-source="b/index" class="form-control selectpage" name="row[b_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ads_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ads_id" data-rule="required" data-source="ads/index" class="form-control selectpage" name="row[ads_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Last_pay')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-last_pay" class="form-control" name="row[last_pay]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Last_pay_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-last_pay_lz" class="form-control" name="row[last_pay_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Oauth_code')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-oauth_code" class="form-control" name="row[oauth_code]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lock_flag')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lock_flag" data-rule="required" class="form-control" name="row[lock_flag]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active2')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active2" data-rule="required" class="form-control" name="row[active2]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active3')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active3" data-rule="required" class="form-control" name="row[active3]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active4')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active4" data-rule="required" class="form-control" name="row[active4]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active5')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active5" data-rule="required" class="form-control" name="row[active5]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active6')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active6" data-rule="required" class="form-control" name="row[active6]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active7')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active7" data-rule="required" class="form-control" name="row[active7]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active8')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active8" data-rule="required" class="form-control" name="row[active8]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active9')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active9" data-rule="required" class="form-control" name="row[active9]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active10')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active10" data-rule="required" class="form-control" name="row[active10]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active11')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active11" data-rule="required" class="form-control" name="row[active11]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active12')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active12" data-rule="required" class="form-control" name="row[active12]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active13')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active13" data-rule="required" class="form-control" name="row[active13]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active14')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active14" data-rule="required" class="form-control" name="row[active14]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active15')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active15" data-rule="required" class="form-control" name="row[active15]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active16')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active16" class="form-control" name="row[active16]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active17')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active17" class="form-control" name="row[active17]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active18')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active18" class="form-control" name="row[active18]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active19')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active19" class="form-control" name="row[active19]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active20')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active20" class="form-control" name="row[active20]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active21')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active21" class="form-control" name="row[active21]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active22')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active22" class="form-control" name="row[active22]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active23')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active23" class="form-control" name="row[active23]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active24')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active24" class="form-control" name="row[active24]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active25')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active25" class="form-control" name="row[active25]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active26')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active26" class="form-control" name="row[active26]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active27')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active27" class="form-control" name="row[active27]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active28')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active28" class="form-control" name="row[active28]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active29')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active29" class="form-control" name="row[active29]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active30')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active30" data-rule="required" class="form-control" name="row[active30]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active60')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active60" data-rule="required" class="form-control" name="row[active60]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active90')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active90" data-rule="required" class="form-control" name="row[active90]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active120')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active120" class="form-control" name="row[active120]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active180')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active180" class="form-control" name="row[active180]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Active360')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-active360" class="form-control" name="row[active360]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge1')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge1" class="form-control" name="row[charge1]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge2')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge2" class="form-control" name="row[charge2]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge3')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge3" class="form-control" name="row[charge3]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge4')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge4" class="form-control" name="row[charge4]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge5')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge5" class="form-control" name="row[charge5]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge6')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge6" class="form-control" name="row[charge6]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge7')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge7" class="form-control" name="row[charge7]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge8')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge8" class="form-control" name="row[charge8]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge9')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge9" class="form-control" name="row[charge9]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge10')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge10" class="form-control" name="row[charge10]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge11')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge11" class="form-control" name="row[charge11]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge12')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge12" class="form-control" name="row[charge12]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge13')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge13" class="form-control" name="row[charge13]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge14')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge14" class="form-control" name="row[charge14]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge15')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge15" class="form-control" name="row[charge15]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge30')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge30" class="form-control" name="row[charge30]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge60')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge60" class="form-control" name="row[charge60]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge1_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge1_count" class="form-control" name="row[charge1_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge2_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge2_count" class="form-control" name="row[charge2_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge3_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge3_count" class="form-control" name="row[charge3_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge4_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge4_count" class="form-control" name="row[charge4_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge5_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge5_count" class="form-control" name="row[charge5_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge6_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge6_count" class="form-control" name="row[charge6_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge7_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge7_count" class="form-control" name="row[charge7_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge8_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge8_count" class="form-control" name="row[charge8_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge9_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge9_count" class="form-control" name="row[charge9_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge10_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge10_count" class="form-control" name="row[charge10_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge11_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge11_count" class="form-control" name="row[charge11_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge12_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge12_count" class="form-control" name="row[charge12_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge13_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge13_count" class="form-control" name="row[charge13_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge14_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge14_count" class="form-control" name="row[charge14_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge15_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge15_count" class="form-control" name="row[charge15_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge30_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge30_count" class="form-control" name="row[charge30_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge60_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge60_count" class="form-control" name="row[charge60_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge1_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge1_lz" class="form-control" name="row[charge1_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge2_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge2_lz" class="form-control" name="row[charge2_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge3_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge3_lz" class="form-control" name="row[charge3_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge4_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge4_lz" class="form-control" name="row[charge4_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge5_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge5_lz" class="form-control" name="row[charge5_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge6_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge6_lz" class="form-control" name="row[charge6_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge7_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge7_lz" class="form-control" name="row[charge7_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge8_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge8_lz" class="form-control" name="row[charge8_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge9_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge9_lz" class="form-control" name="row[charge9_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge10_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge10_lz" class="form-control" name="row[charge10_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge11_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge11_lz" class="form-control" name="row[charge11_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge12_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge12_lz" class="form-control" name="row[charge12_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge13_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge13_lz" class="form-control" name="row[charge13_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge14_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge14_lz" class="form-control" name="row[charge14_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge15_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge15_lz" class="form-control" name="row[charge15_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge30_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge30_lz" class="form-control" name="row[charge30_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge60_lz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge60_lz" class="form-control" name="row[charge60_lz]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge1_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge1_lz_count" class="form-control" name="row[charge1_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge2_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge2_lz_count" class="form-control" name="row[charge2_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge3_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge3_lz_count" class="form-control" name="row[charge3_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge4_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge4_lz_count" class="form-control" name="row[charge4_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge5_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge5_lz_count" class="form-control" name="row[charge5_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge6_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge6_lz_count" class="form-control" name="row[charge6_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge7_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge7_lz_count" class="form-control" name="row[charge7_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge8_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge8_lz_count" class="form-control" name="row[charge8_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge9_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge9_lz_count" class="form-control" name="row[charge9_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge10_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge10_lz_count" class="form-control" name="row[charge10_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge11_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge11_lz_count" class="form-control" name="row[charge11_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge12_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge12_lz_count" class="form-control" name="row[charge12_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge13_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge13_lz_count" class="form-control" name="row[charge13_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge14_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge14_lz_count" class="form-control" name="row[charge14_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge15_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge15_lz_count" class="form-control" name="row[charge15_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge30_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge30_lz_count" class="form-control" name="row[charge30_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Charge60_lz_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-charge60_lz_count" class="form-control" name="row[charge60_lz_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,40 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type" class="form-control" name="row[type]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Source_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-source_id" data-rule="required" data-source="source/index" class="form-control selectpage" name="row[source_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Opt_d')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-opt_d" data-rule="required" class="form-control" name="row[opt_d]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('View_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-view_count" data-rule="required" class="form-control" name="row[view_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Hit_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-hit_count" data-rule="required" class="form-control" name="row[hit_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

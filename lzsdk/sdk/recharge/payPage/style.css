@@ -1,0 +1,141 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+
+
+#header{
+    background-color: RGB(15, 157, 206);
+    width: 100%;
+    height: 50px;
+}
+.backImg{
+    float: left;
+    padding-top:10px;
+    padding-left: 15px;
+    width: 60px;
+    height: 40px;
+}
+.backImg a{
+    width: 100%;
+    height: 100%;
+}
+.backImg a img{
+    width: 30px;
+    height: 30px
+}
+.headerTitle{
+    padding-top: 5px;
+    width: 260px;
+    height: 40px;
+    text-align: center;
+    margin: 0 auto;
+}
+.headerTitle p{
+    font-size: 25px;
+    color: RGB(254, 254, 254)
+}
+
+
+
+.container{
+    width: 100%;
+    height: 500px;
+    background-color: RGB(244, 244, 244);
+}
+/*页面布局*/
+.infoContainer{
+    float: left;
+    width: 100%;
+    height: 60px;
+
+}
+.infoLabel{
+    margin-top: 0px;
+    margin-left: 10%;
+    width: 80%;
+    height: 30px;
+    background-color: RGB(244, 244, 244);
+
+}
+.infoLabel p{
+    text-align: left;
+    padding-top: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+}
+
+
+
+/*页面布局*/
+.repaContainer{
+    float: left;
+    width: 100%;
+    height: 400px;
+}
+.repaBtn{
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    border: 1px solid darkgray;
+}
+.repaBtn a{
+    width: 100%;
+    height: 100%;
+}
+.repaBtn a img{
+    float: left;
+    margin-top: 5px;
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+}
+.repaBtn a p{
+    float: left;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: -70px;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

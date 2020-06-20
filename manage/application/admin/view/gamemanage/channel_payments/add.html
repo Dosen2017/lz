@@ -1,0 +1,93 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Channel_pkg_num')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-channel_pkg_num" data-rule="required"  data-source="gamemanage/channel_pkg/searchlist2" class="form-control selectpage" name="row[channel_pkg_num]" type="text" value="">-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Channel_pkg_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-channel_pkg_num" readonly="true" data-rule="required" class="form-control" name="row[channel_pkg_num]" type="text" value="{$Request.session.s_channel_pkg_num}">
+        </div>
+    </div>
+
+
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Strategy_class')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-strategy_class" class="form-control" name="row[strategy_class]" type="text" value="">-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Strategy_class')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-strategy_class" data-rule="required"  data-source="gamemanage/channel_payments/getStategyClass" class="form-control selectpage" name="row[strategy_class]" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Desc')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-desc"  data-rule="required"  class="form-control" name="row[desc]" type="text" value="">
+        </div>
+    </div>
+
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Strategy_json')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <textarea id="c-strategy_json" class="form-control " rows="5" name="row[strategy_json]" cols="50"></textarea>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div id="ChargeAmountStrategy" class="strategy"  style="display: none" >
+        <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2">本次金额下限(元)</label>
+            <div class="col-xs-12 col-sm-8">
+                <input id="c-payAmountMin" class="form-control" name="row[conf_payAmountMin]" type="text" value="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2">本次金额上限(元)</label>
+            <div class="col-xs-12 col-sm-8">
+                <input id="c-payAmountMax" class="form-control" name="row[conf_payAmountMax]" type="text" value="">
+            </div>
+        </div>
+    </div>
+
+    <div id="PackIdStrategy" class="strategy"  style="display: none" >
+        <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2">packId列表</label>
+            <div class="col-xs-12 col-sm-8">
+                <textarea id="c-packIdList" class="form-control " rows="5" name="row[conf_packIdList]" cols="50"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div id="UserStrategy" class="strategy"  style="display: none" >
+        <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2">特别允许用户</label>
+            <div class="col-xs-12 col-sm-8">
+                <textarea id="c-user" class="form-control " rows="5" name="row[conf_userList]" cols="50"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+
+<script>
+
+
+
+</script>

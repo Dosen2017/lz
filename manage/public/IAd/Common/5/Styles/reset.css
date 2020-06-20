@@ -1,0 +1,240 @@
+@charset "utf-8";
+/********** 初始化 **********/
+/*去除默认边距*/
+html,
+body,
+header,
+section,
+footer,
+article,
+nav,
+aside,
+dialog,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+/*阻止旋转屏幕时自动调整字体大小*/
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    min-width: 320px;
+    max-width: 640px;
+    font: 14px/1.2 "\5FAE\8F6F\96C5\9ED1", Verdana, Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #fff;
+    -webkit-text-size-adjust: none;
+    margin: 0 auto;
+}
+/* media查询，设置htmlfont-size值 */
+@media screen and (max-width: 320px) {
+    /*设备宽度在320区间的样式*/
+    html {
+        font-size: 50px;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    /*设备宽度在321-375区间的样式(iphone6)*/
+    html {
+        font-size: 58.59375px;
+    }
+}
+@media screen and (min-width: 376px) and (max-width: 414px) {
+    /*设备宽度在376-414区间的样式(iphone6+)*/
+    html {
+        font-size: 64.6875px;
+    }
+}
+@media screen and (min-width: 415px) and (max-width: 480px) {
+    /*设备宽度在415-480区间的样式*/
+    html {
+        font-size: 75px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 540px) {
+    /*设备宽度在481-540区间的样式*/
+    html {
+        font-size: 84.375px;
+    }
+}
+@media screen and (min-width: 541px) and (max-width: 640px) {
+    /*设备宽度在541-640区间的样式*/
+    html {
+        font-size: 100px;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 720px) {
+    /*设备宽度在641-720区间的样式*/
+    html {
+        font-size: 112.5px;
+    }
+}
+@media screen and (min-width: 721px) and (max-width: 750px) {
+    /*设备宽度在721-750区间的样式*/
+    html {
+        font-size: 117.1875px;
+    }
+}
+@media screen and (min-width: 751px) {
+    /*设备宽度在751以上的样式*/
+    html {
+        font-size: 117.1875px;
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+/* 禁止选中文本（如无文本选中需求，此为必选项） */
+html,
+body {
+    -webkit-user-select: none;
+    user-select: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-weight: normal;
+    font-size: 100%;
+}
+em {
+    font-style: normal;
+}
+ul,
+ol {
+    list-style-type: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    /*display: block;*/
+    text-decoration: none;
+}
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+input,
+button,
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+textarea {
+    resize: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+/* 禁止长按链接与图片弹出菜单 */
+a,
+img {
+    -webkit-touch-callout: none;
+    touch-callout: none;
+}
+/*去掉手持设备点击时出现的透明层*/
+a,
+button,
+input,
+select {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+/********** 公共样式 **********/
+/*伸缩的盒子*/
+.box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex1 {
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    flex: 1;
+}
+.flex2 {
+    -webkit-flex: 2;
+    -webkit-box-flex: 2;
+    box-flex: 2;
+    flex: 2;
+}
+.flex3 {
+    -webkit-flex: 3;
+    -webkit-box-flex: 3;
+    box-flex: 3;
+    flex: 3;
+}
+/*box-sizing包括边框的宽度*/
+.box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*图片大小自适应*/
+.img {
+    width: 100%;
+    display: block;
+}
+/*文字超出隐藏*/
+.text-elli {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.text-elli2{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/*清除浮动样式*/
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix:after {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    content: " ";
+    visibility: hidden;
+    clear: both;
+}
+.trans{
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+}

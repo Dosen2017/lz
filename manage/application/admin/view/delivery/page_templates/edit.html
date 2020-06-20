@@ -1,0 +1,100 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Template_path')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-template_path" class="form-control" name="row[template_path]" type="text" value="{$row.template_path|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Desc')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-desc" class="form-control " rows="5" name="row[desc]" cols="50">{$row.desc|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Picture')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-picture" class="form-control" name="row[picture]" type="text" value="{$row.picture|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" class="form-control" name="row[title]" type="text" value="{$row.title|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ios_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ios_url" class="form-control" name="row[ios_url]" type="text" value="{$row.ios_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Android_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-android_url" class="form-control" name="row[android_url]" type="text" value="{$row.android_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ios_channelid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ios_channelid" data-rule="required" class="form-control" name="row[ios_channelid]" type="number" value="{$row.ios_channelid|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Android_channelid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-android_channelid" data-rule="required" class="form-control" name="row[android_channelid]" type="number" value="{$row.android_channelid|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ref_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ref_count" data-rule="required" class="form-control" name="row[ref_count]" type="number" value="{$row.ref_count|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-xs-12 col-sm-2">{:__('配置选项')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <dl class="fieldlist" data-template="argsconfigtpl" data-name="row[args_config]">
+                <dd>
+                    <ins>{:__('名称')}</ins>
+                    <ins>{:__('类型')}</ins>
+                    <ins>{:__('默认值')}</ins>
+                    <ins>{:__('说明')}</ins>
+                </dd>
+                <dd><a href="javascript:;" class="btn btn-sm btn-success btn-append"><i class="fa fa-plus"></i> {:__('Append')}</a></dd>
+                <!--请注意 dd和textarea间不能存在其它任何元素，实际开发中textarea应该添加个hidden进行隐藏-->
+                <textarea name="row[args_config]" style="display: none"  class="form-control" cols="30" rows="5">{$row.args_config}</textarea>
+            </dl>
+            <script id="argsconfigtpl" type="text/html">
+                <dd class="form-inline">
+                    <ins><input type="text" name="<%=name%>[<%=index%>][Name]" class="form-control" value="<%=row.Name%>" placeholder="名称"/></ins>
+                    <ins><input type="text" name="<%=name%>[<%=index%>][Type]" class="form-control selectpage" data-source={"list":[{"id":"1","username":"文本"},{"id":"2","username":"图片"},{"id":"3","username":"长文本"},{"id":"4","username":"选择"}],"total":4}' data-field="username" value="<%=row.Type%>" placeholder="类型" size="10"/></ins>
+                    <ins><input type="text" name="<%=name%>[<%=index%>][Default]" class="form-control" value="<%=row.Default%>" placeholder="默认值"/></ins>
+                    <ins><input type="text" name="<%=name%>[<%=index%>][Description]" class="form-control" value="<%=row.Description%>" placeholder="说明"/></ins>
+                    <!--下面的两个按钮务必保留-->
+                    <span class="btn btn-sm btn-danger btn-remove"><i class="fa fa-times"></i></span>
+                    <span class="btn btn-sm btn-primary btn-dragsort"><i class="fa fa-arrows"></i></span>
+                </dd>
+            </script>
+        </div>
+    </div>
+
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

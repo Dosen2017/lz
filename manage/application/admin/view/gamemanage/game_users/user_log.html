@@ -1,0 +1,38 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>{:__('User_num')}</th>
+            <th>{:__('User_name')}</th>
+            <th>{:__('Pack_num')}</th>
+            <th>{:__('B_id')}</th>
+            <th>{:__('Ads_id')}</th>
+            <th>{:__('Ip')}</th>
+<!--            <th>{:__('Device_num')}</th>-->
+<!--            <th>{:__('Device_model')}</th>-->
+<!--            <th>{:__('Mac')}</th>-->
+            <th>{:__('Opt_time')}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {volist name="row" id="vo"  }
+            <tr>
+                <td>{$vo['user_num']|htmlentities}</td>
+                <td>{$vo['user_name']|htmlentities}</td>
+                <td>{$vo['pack_num']|htmlentities}</td>
+                <td>{$vo['b_id']|htmlentities}</td>
+                <td>{$vo['ads_id']|htmlentities}</td>
+                <td>{$vo['ip']|htmlentities}</td>
+<!--                <td>{$vo['device_num']|htmlentities}</td>-->
+<!--                <td>{$vo['device_model']|htmlentities}</td>-->
+<!--                <td>{$vo['mac']|htmlentities}</td>-->
+                <td>{$vo['opt_time']|datetime}</td>
+            </tr>
+        {/volist}
+    </tbody>
+</table>
+<div class="hide layer-footer">
+    <label class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+        <button type="reset" class="btn btn-primary btn-embossed btn-close" onclick="Layer.closeAll();">{:__('Close')}</button>
+    </div>
+</div>

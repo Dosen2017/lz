@@ -1,0 +1,33 @@
+<?php
+
+return [
+    'Id'                   => '标识ID',
+    'Channel_pkg_num'      => '渠道ID',
+    'Number'               => '包编号',
+    'Channel_pkg_name'     => '渠道名称',
+    'Game_num'             => '所属游戏',
+    'Channel_num'          => '渠道商',
+    'Os_type'              => '系统',
+    'Os_type 1'            => 'IOS',
+    'Os_type 2'            => '安卓',
+    'Os_type 3'            => 'H5',
+    'Os_type 4'            => '微信小程序',
+    'Os_type 5'            => 'QQ小程序',
+    'Notify_url'           => '回调地址',
+    'Api_url'              => 'API地址',
+    'Name_suffix'          => '渠道前缀',
+    'Channel_config'       => '渠道配置',
+    'Payment_num'          => '支付策略',
+    'Login_lockswitch'     => '登录锁定',
+    'Register_lockswitch'  => '注册锁定',
+    'Pay_lockswitch'       => '支付锁定',
+    'Login_smswitch'       => '登录实名',
+    'Pay_smswitch'         => '支付实名',
+    'Quick_regitserswitch' => '快速注册',
+    'Fcmswitch'            => '防沉迷',
+    'Createtime'           => '创建时间',
+    'Productjson'          => '正版IOS产品配置',
+    'Key'                  => '产品ID',
+    'Value'                => '金额（分）',
+    'Bundle'               => 'BundleID'
+];

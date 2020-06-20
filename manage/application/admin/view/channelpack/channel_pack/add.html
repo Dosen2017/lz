@@ -1,0 +1,10 @@
+<form method="get" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Game_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {:build_select('game_num', $gamelist, null, ['class'=>'form-control', 'required'=>''])}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success btn-embossed">{:__('OK')}</button>
+</form>

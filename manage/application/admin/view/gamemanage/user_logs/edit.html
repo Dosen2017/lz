@@ -1,0 +1,142 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_num" data-rule="required" class="form-control" name="row[user_num]" type="number" value="{$row.user_num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_name" class="form-control" name="row[user_name]" type="text" value="{$row.user_name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Game_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-game_num" data-rule="required" class="form-control" name="row[game_num]" type="number" value="{$row.game_num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Channel_pkg_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-channel_pkg_num" data-rule="required" class="form-control" name="row[channel_pkg_num]" type="number" value="{$row.channel_pkg_num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Channel_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-channel_num" class="form-control" name="row[channel_num]" type="number" value="{$row.channel_num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pack_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-pack_num" class="form-control" name="row[pack_num]" type="text" value="{$row.pack_num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('B_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-b_id" data-rule="required" data-source="b/index" class="form-control selectpage" name="row[b_id]" type="text" value="{$row.b_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ads_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ads_id" data-rule="required" data-source="ads/index" class="form-control selectpage" name="row[ads_id]" type="text" value="{$row.ads_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ip')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ip" class="form-control" name="row[ip]" type="text" value="{$row.ip|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Device_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-device_num" class="form-control" name="row[device_num]" type="text" value="{$row.device_num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Device_num_md5')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-device_num_md5" class="form-control" name="row[device_num_md5]" type="text" value="{$row.device_num_md5|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Device_model')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-device_model" class="form-control" name="row[device_model]" type="text" value="{$row.device_model|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Mac')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-mac" class="form-control" name="row[mac]" type="text" value="{$row.mac|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Os_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-os_type" class="form-control selectpicker" name="row[os_type]">
+                {foreach name="osTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.os_type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Os_version')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-os_version" class="form-control" name="row[os_version]" type="text" value="{$row.os_version|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Net_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-net_type" class="form-control" name="row[net_type]" type="text" value="{$row.net_type|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Country')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-country" class="form-control" name="row[country]" type="text" value="{$row.country|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Province')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-province" class="form-control" name="row[province]" type="text" value="{$row.province|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('City')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class='control-relative'><input id="c-city" class="form-control" data-toggle="city-picker" name="row[city]" type="text" value="{$row.city|htmlentities}"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Opt_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-opt_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[opt_time]" type="text" value="{:$row.opt_time?datetime($row.opt_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Opt_d')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-opt_d" class="form-control" name="row[opt_d]" type="number" value="{$row.opt_d|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

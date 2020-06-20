@@ -1,0 +1,176 @@
+<font color="#dc143c">公用模板名称:{$row.page_temp_name|htmlentities}</font>
+
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Page_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-page_name" class="form-control" name="row[page_name]" type="text" value="{$row.page_name|htmlentities}">
+        </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Template_id')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-template_id" data-rule="required" data-source="template/index" class="form-control selectpage" name="row[template_id]" type="text" value="{$row.template_id|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" class="form-control" name="row[title]" type="text" value="{$row.title|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ios_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ios_url" class="form-control" name="row[ios_url]" type="text" value="{$row.ios_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Android_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-android_url" class="form-control" name="row[android_url]" type="text" value="{$row.android_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ios_channelid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ios_channelid" data-rule="required" class="form-control" name="row[ios_channelid]" type="number" value="{$row.ios_channelid|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Android_channelid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-android_channelid" data-rule="required" class="form-control" name="row[android_channelid]" type="number" value="{$row.android_channelid|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Redirect_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-redirect_type" class="form-control selectpicker" name="row[redirect_type]">
+                {foreach name="redirectTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.redirect_type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Query_device')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-query_device" class="form-control" name="row[query_device]" type="text" value="{$row.query_device|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Query_ip')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-query_ip" class="form-control" name="row[query_ip]" type="text" value="{$row.query_ip|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Query_callback')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-query_callback" class="form-control" name="row[query_callback]" type="text" value="{$row.query_callback|htmlentities}">
+        </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Ext_config')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <textarea id="c-ext_config" class="form-control " rows="5" name="row[ext_config]" cols="50">{$row.ext_config|htmlentities}</textarea>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ref_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ref_count" data-rule="required" class="form-control" name="row[ref_count]" type="number" value="{$row.ref_count|htmlentities}">
+        </div>
+    </div>
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Type_id')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-type_id" data-rule="required" data-source="type/index" class="form-control selectpage" name="row[type_id]" type="text" value="{$row.type_id|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <volist name="ext_config" id="vo">-->
+<!--        <div class="form-group">-->
+<!--            <label class="control-label col-xs-12 col-sm-2">{$key}</label>-->
+<!--            <div class="col-xs-12 col-sm-8">-->
+<!--                <input id="c-{$key}" class="form-control" name="row[conf_{$key}]" type="text" value="{$vo}">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </volist>-->
+
+    {foreach name="ext_config" item="vo"}
+        {if condition="$vo['Type'] eq '文本'"}
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-2">{$vo.Name}({$vo.Description})</label>
+                <div class="col-xs-12 col-sm-8">
+                    <input id="c-{$vo.Name}" class="form-control" name="row[conf_{$vo.Name}]" type="text" value="{$vo.Default}">
+                </div>
+            </div>
+        {elseif condition="$vo['Type'] eq '长文本'" /}
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-2">{$vo.Name}({$vo.Description})</label>
+                <div class="col-xs-12 col-sm-8">
+                    <textarea class="form-control" id="c-{$vo.Name}" name="row[conf_{$vo.Name}]">{$vo.Default|htmlentities}</textarea>
+                </div>
+            </div>
+        {elseif condition="$vo['Type'] eq '图片'" /}
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-2">{$vo.Name}({$vo.Description})</label>
+                <div class="col-xs-12 col-sm-8">
+                    <div class="input-group">
+                        <input id="c-{$vo.Name}" class="form-control" size="50" name="row[conf_{$vo.Name}]" type="text" value="{$vo.Default}">
+                        <div class="input-group-addon no-border no-padding">
+                            <span><button type="button" id="plupload-{$vo.Name}" class="btn btn-danger plupload" data-input-id="c-{$vo.Name}" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-{$vo.Name}"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+<!--                            <span><button type="button" id="fachoose-{$vo.Name}" class="btn btn-primary fachoose" data-input-id="c-{$vo.Name}" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>-->
+                        </div>
+                        <span class="msg-box n-right" for="c-{$vo.Name}"></span>
+                    </div>
+<!--                    <ul class="row list-inline plupload-preview" id="p-{$vo.Name}"></ul>-->
+                </div>
+            </div>
+        {elseif condition="$vo['Type'] eq '选择'" /}
+
+            <?php
+                $selectList = [];
+                $selectData = explode('|', $vo['Description']);
+                foreach($selectData as $k => $v) {
+                    $temp = explode("@", $v);
+                    $selectList[$temp[0]] = $temp[1];
+                }
+
+            ?>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-2">{$vo.Name}({$vo.Description}):</label>
+                <div class="col-xs-12 col-sm-8">
+
+                    <select  id="c-{$vo.Name}" class="form-control selectpicker" name="row[conf_{$vo.Name}]">
+                        {foreach name="$selectList" item="voo"}
+                        <option value="{$key}" {in name="key" value="$vo.Default"}selected{/in}>{$voo}</option>
+                        {/foreach}
+                    </select>
+
+                </div>
+            </div>
+
+        {else/>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-2">{$vo.Name}({$vo.Description})</label>
+                <div class="col-xs-12 col-sm-8">
+                    <input id="c-{$vo.Name}" class="form-control" name="row[conf_{$vo.Name}]" type="text" value="{$vo.Default}">
+                </div>
+            </div>
+        {/if}
+    {/foreach}
+
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

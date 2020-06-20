@@ -1,0 +1,66 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('App_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-app_num" class="form-control" name="row[app_num]" type="number" value="{$row.app_num|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('App_key')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-app_key" class="form-control" name="row[app_key]" type="text" value="{$row.app_key|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Pay_key')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-pay_key" class="form-control" name="row[pay_key]" type="text" value="{$row.pay_key|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Iconimage')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-iconimage" class="form-control" size="50" name="row[iconimage]" type="text" value="{$row.iconimage|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-iconimage" class="btn btn-danger plupload" data-input-id="c-iconimage" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-iconimage"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-iconimage" class="btn btn-primary fachoose" data-input-id="c-iconimage" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-iconimage"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-iconimage"></ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Notify_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-notify_url" class="form-control" name="row[notify_url]" type="text" value="{$row.notify_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Web_notify_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-web_notify_url" class="form-control" name="row[web_notify_url]" type="text" value="{$row.web_notify_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Bkinfo')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-bkinfo" class="form-control " rows="5" name="row[bkinfo]" cols="50">{$row.bkinfo|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

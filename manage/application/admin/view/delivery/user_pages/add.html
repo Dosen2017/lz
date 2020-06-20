@@ -1,0 +1,64 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ads_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ads_id" data-rule="required" data-source="ads/index" class="form-control selectpage" name="row[ads_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_template_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_template_id" data-rule="required" data-source="user/template/index" class="form-control selectpage" name="row[user_template_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" class="form-control" name="row[title]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ios_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ios_url" class="form-control" name="row[ios_url]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Android_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-android_url" class="form-control" name="row[android_url]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ios_channelid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ios_channelid" data-rule="required" class="form-control" name="row[ios_channelid]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Android_channelid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-android_channelid" data-rule="required" class="form-control" name="row[android_channelid]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Redirect_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-redirect_type" class="form-control selectpicker" name="row[redirect_type]">
+                {foreach name="redirectTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="1"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
