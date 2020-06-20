@@ -16,7 +16,7 @@ $dbBase = [
     // 数据库用户名
     'username'    => 'suds',
     // 数据库密码
-    'password'    => 'Aa1122334###',
+    'password'    => '',
     // 数据库编码默认采用utf8
     'charset'     => 'utf8',
     // 数据库表前缀
